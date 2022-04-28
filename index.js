@@ -48,7 +48,11 @@ console.log(secondsNextYear);
 var secondsThisYear = today.getTime();
 console.log(secondsThisYear);
 
+//*** Print days left
+var daysLeft = document.querySelector('#daysLeft');
+var daysLeftValue = Math.ceil((secondsNextYear - secondsThisYear) / oneDay);
+
 console.log(
-  Math.ceil((secondsNextYear - secondsThisYear) / oneDay) +
-    ' preostalo dana do Nove godine!'
+  daysLeftValue + ' preostalo dana do Nove godine!' //*** 278 preostalo dana do Nove godine!
 );
+daysLeft.innerText = daysLeftValue;
